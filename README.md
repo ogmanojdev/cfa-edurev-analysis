@@ -64,7 +64,7 @@ rendered text.
 Requires Python 3 (standard library only — no dependencies) and a browser.
 
 ```bash
-git clone https://github.com/<you>/cfa-edurev-analysis
+git clone https://github.com/ogmanojdev/cfa-edurev-analysis
 cd cfa-edurev-analysis
 python3 collector.py 8787
 ```
