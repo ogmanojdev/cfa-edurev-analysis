@@ -11,3 +11,6 @@ tracker.html
 __pycache__/
 *.pyc
 .DS_Store
+
+# Personal correspondence draft.
+email-to-edurev.md
