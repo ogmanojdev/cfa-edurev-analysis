@@ -4,13 +4,12 @@
 raw/
 out/
 
-# Generated study plan — embeds your own scores, misses and misconceptions.
-# It is a personal document, not part of the tool.
-tracker.html
-
 __pycache__/
 *.pyc
 .DS_Store
 
 # Personal correspondence draft.
 email-to-edurev.md
+
+# NOTE: tracker.html IS tracked, and it embeds personal scores and wrong answers.
+# Strip it from history before making this repository public.
