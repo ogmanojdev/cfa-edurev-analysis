@@ -11,5 +11,6 @@ __pycache__/
 # Personal correspondence draft.
 email-to-edurev.md
 
-# NOTE: tracker.html IS tracked, and it embeds personal scores and wrong answers.
-# Strip it from history before making this repository public.
+# Generated study plan. Holds personal scores AND reconstructs EduRev questions with
+# their worked numbers — excluded under condition 2 of EduRev's permission.
+tracker.html

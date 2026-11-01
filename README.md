@@ -1,5 +1,9 @@
 # CFA Level 1 — EduRev result analyser
 
+> **An independent project. Not affiliated with, endorsed by, or supported by EduRev.**
+> It contains no EduRev code and no EduRev content. "CFA" is a trademark of CFA
+> Institute, which is likewise unaffiliated.
+
 EduRev tells you *that* you got 19 of 30 Fixed Income questions right. It does not tell
 you that three of the eleven misses were the same confusion about premium bonds, or that
 half your misses across every test were on questions it rated **Easy**.
@@ -132,18 +136,31 @@ days on it.
 
 ---
 
-## Please read this before you push anything
+## Scope, and what this repository deliberately excludes
 
-**Your results and EduRev's questions are both excluded from git on purpose.**
-`.gitignore` covers `raw/` and `out/`.
+EduRev were asked before this was published, and were broadly supportive of the code
+being open-sourced on four conditions. Those conditions are met as follows, and anyone
+forking this is expected to keep them met.
 
-- `raw/` holds question text, answer options and explanations copied verbatim from
-  EduRev. That is their copyrighted content from a paid platform. Running it locally for
-  your own study is ordinary personal use; republishing it is redistribution, and not
-  yours to do.
-- `out/` holds your scores and every question you got wrong.
+**1. Only my own code.** Every file here was written for this project. There is no
+EduRev source code. `extract.js` does reference EduRev's own CSS class names
+(`#solutionsDiv`, `.solutionquestion`, `.wrng_ans`) because it has to read their markup
+— the same way any client references the field names of the thing it reads. Those
+selectors are not their code, but they are named here rather than hidden.
 
-If you fork this, keep both ignored. Share the tool, not the question bank.
+**2. No EduRev content, ever.** `.gitignore` excludes `raw/` (question text, options and
+explanations, copied verbatim into local JSON) and `out/` (the generated report, which
+quotes them). Nothing derived from the question bank is committed. If you build
+something from your own report — a study plan, notes, a summary — check it for
+reconstructed questions and worked answers before committing it; that is still their
+content in paraphrase.
+
+**3. Only data you are already authorised to see.** The extractor reads the solution set
+that your own result page has already loaded into your own browser, for tests on your
+own account. It makes no API calls, cannot enumerate tests, cannot reach another user's
+data, and cannot retrieve anything you have not purchased.
+
+**4. Independence stated.** See the top of this file.
 
 ---
 
