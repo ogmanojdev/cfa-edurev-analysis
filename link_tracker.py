@@ -89,6 +89,9 @@ for tid, concepts in TASKS.items():
     if not links:
         skipped += 1
         continue
+    # drop any links: already on this task, so re-running stays idempotent
+    html = re.sub(r'(\{id:"' + tid + r'",.*?)\n\s*links:\[.*?\],(?=\n\s*fix:)',
+                  lambda m: m.group(1), html, count=1, flags=re.S)
     # attach to the task object, right before its fix: field
     pat = re.compile(r'(\{id:"' + tid + r'",.*?)(\n\s*fix:)', re.S)
     if not pat.search(html):
