@@ -60,6 +60,8 @@ rendered text.
 | `bootstrap.js` | The one-liner to paste into each result page: fetch extractor → run → POST. |
 | `taxonomy.py` | Topic weights plus ~90 concepts, each tied to a curriculum module and a keyword set. **This is the file to edit** as you spot mis-bucketed questions. |
 | `analyze.py` | Classifies everything, writes the report and CSVs. |
+| `worksheet.py` | Builds a cold re-attempt worksheet from any slice of your misses, key held to the end. |
+| `rebuild_tracker.py` | Regenerates every figure in a generated study plan from the latest data. Idempotent. |
 
 ---
 

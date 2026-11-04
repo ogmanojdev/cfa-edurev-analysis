@@ -33,12 +33,15 @@ From then on it is one click on any result page.
 ## 3. Rebuild the analysis
 
 ```bash
-python3 analyze.py && python3 link_tracker.py
+python3 analyze.py && python3 rebuild_tracker.py
 ```
 
 `analyze.py` rewrites `out/report.md` and the CSVs over the whole corpus.
-`link_tracker.py` refreshes the result-page links inside `tracker.html`.
-Both are safe to re-run as often as you like.
+`rebuild_tracker.py` then refreshes every figure inside `tracker.html` — the
+masthead counts, the topic table, the worst-concepts table, each task's stat
+chip and easy-miss count, and the result-page links. Only the numbers change;
+none of the written guidance is touched. Both are safe to re-run as often as
+you like.
 
 Then ask Claude to republish the tracker, or open `out/report.md` directly.
 
