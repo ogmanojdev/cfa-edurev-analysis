@@ -45,6 +45,8 @@ TASKS = {
  "j3": ["Fund structures: open-end vs closed-end, fee terms",
         "Real estate & infrastructure valuation (NAV, cap rate)",
         "Hedge fund strategies & due diligence"],
+ "j5": ["Market structures: monopoly, oligopoly, competition",
+        "Term structure / spot-forward-par curves"],
  "k1": ["CML, SML & two-fund separation"],
  "k2": ["Portfolio variance, covariance & correlation math",
         "Efficient frontier & diversification benefits"],

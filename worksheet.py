@@ -50,6 +50,10 @@ path = os.path.join(analyze.OUT, f"worksheet-{slug}.md")
 L = [f"# Cold re-attempt — {label}", "",
      f"{len(sel)} questions you got wrong. Work them without the key, then score.",
      "A question you now get right was a misread. One you still cannot do is a real gap.",
+     "",
+     "Tag each one as you score it. If more than a third come back misread or calc slip,",
+     "the remaining problem is exam technique, not content — and the last days should",
+     "shift toward timed drilling rather than reading.",
      ""]
 seen = [t for t in dict.fromkeys(r["test"] for r in sel) if t in src]
 if seen:
@@ -61,7 +65,10 @@ for i, r in enumerate(sel, 1):
     for o in opts.get((r["test"], r["q"]), []):
         L.append(f"- {o}")
     # deliberately NOT showing last time's pick — it would narrow three options to two
-    L += ["", "Your answer: ______", "", "---", ""]
+    L += ["", "Your answer: ______",
+          "",
+          "Tag it:  `[ ] concept gap`   `[ ] misread`   `[ ] calc slip`",
+          "", "---", ""]
 
 L += ["", "## Key", ""]
 for i, r in enumerate(sel, 1):
